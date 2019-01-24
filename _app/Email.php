@@ -9,22 +9,22 @@ class Email
     private $mail = \stdClass::class;
 
     /** Método construto: É o responsável por setar todos os parâmtros de configuração do e-mail a ser envido.*/
-    public function __construct()
+    public function __construct($smtpDebug, $host, $user, $password, $smtpSecure, $port, $setFromEmail, $setFromName)
     {
         $this->mail = new PHPMailer(true);
-        $this->mail->SMTPDebug = 2;
-        $this->mail->isSMTP();
-        $this->mail->Host = 'mail.onestorm.com.br';
-        $this->mail->SMTPAuth = true;
-        $this->mail->Username = 'contato@onestorm.com.br';
-        $this->mail->Password = '#$Developer$%';
-        $this->mail->SMTPSecure = 'tls';
-        $this->mail->CharSet = 'utf-8';
+        $this->mail->SMTPDebug = $smtpDebug;            // Enable verbose debug output
+        $this->mail->isSMTP();                          // Set mailer to use SMTP
+        $this->mail->Host = $host;                      // Specify main and backup SMTP server
+        $this->mail->SMTPAuth = true;                   // Enable SMTP authentication
+        $this->mail->Username = $user;                  // SMTP username
+        $this->mail->Password = $password;              // SMTP password
+        $this->mail->SMTPSecure = $smtpSecure;          // Enable TLS encryption `ssl` also acepted
+        $this->mail->CharSet = 'utf-8';                 // TCP port to connect to
         $this->mail->setLanguage('br');
         $this->mail->isHTML(true);
-        $this->mail->Port = 587;
+        $this->mail->Port = $port;
         //Recepients
-        $this->mail->setFrom('contato@onestorm.com.br','Full Developer PHP');
+        $this->mail->setFrom($setFromEmail,$setFromName);
     }
 
     /** Método construto: É o responsável por setar todos os parâmtros do e-mail.
