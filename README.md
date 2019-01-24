@@ -11,14 +11,14 @@ To make use of the library, simply require the autoload of the composer, invoke 
 ```
 <? php
 
-require __DIR__. '/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 USE Notification\Email;
 
 $email = new Email (2, "mail.host.com", "your@email.com", "your pass", "secure smtp (tls / ssl)",
 "from@email.com", "From the name");
 
-$email-> sendEmail ("SUbject", "Content", "reply@email.com", "Repetition Name", "address@email.com", "Address Name");
+$email-> sendEmail ("Subject", "Content", "reply@email.com", "Repetition Name", "address@email.com", "Address Name");
 ```
 
 Note that the entire email setting is being used by the magic method builder! Once the builder is invoked within your application, your system will be able to execute the shots.
