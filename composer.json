@@ -1,0 +1,26 @@
+{
+    "name": "ander/notification",
+    "description": "This is a library that uses composer as the basis for generation e-mail notification",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anderson",
+            "email": "andersonse@gmail.com",
+            "homepage": "https://onestorm.com.br",
+            "role": "Full Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "6.0.6"
+    },
+    "config": {
+        "vendor-dir": "lib_ext"
+    },
+    "autoload": {
+        "psr-4": {
+            "Notification\\": "_app"
+        }
+    }
+}
