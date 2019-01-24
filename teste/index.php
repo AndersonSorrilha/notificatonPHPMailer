@@ -13,7 +13,7 @@ use Notification\Email;
 $novoEmail = new Email(2,
     "mail.onestorm.com.br",
     "contato@onestorm.com.br",
-    "Sorrilha13",
+    "xxxx",
     "tls",
     '587',
     "contato@onestorm.com.br",
