@@ -5,7 +5,7 @@ Send by email using a phpmailer library. Doing a decompilation action is essenti
 To do a library installation, run the following command:
 
 ```sh
-composer require notification/composer_test
+composer require ander/notification
 ```
 To make use of the library, simply require the autoload of the composer, invoke and call the method:
 ```
