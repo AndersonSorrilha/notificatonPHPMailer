@@ -11,7 +11,7 @@ To make use of the library, simply require the autoload of the composer, invoke 
 ```
 <? php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__. '/vendor/autoload.php';
 
 USE Notification\Email;
 
